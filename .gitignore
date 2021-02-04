@@ -1,0 +1,8 @@
+#ignorar packages
+packages/
+#ignorar secretos
+secret.js
+#ignorar los textos
+*.txt
+#ignorar los que comienzan con log
+log*

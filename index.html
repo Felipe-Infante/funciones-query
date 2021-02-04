@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.clase2').hide();
+            $('.show').click(function() {
+                $('.clase2').show();                
+            });
+            $('.ocultar').click(function() {
+                $('.clase2').hide();                
+            });
+            $('.toggle').click(function() {
+                $('.clase2').toggle();                
+            });
+            $('.agregarDespues').click(function() {
+                $('.clase2 p').append(" agregado después");                
+            });
+            $('.bajando').click(function() {
+                $('.clase3').slideDown();                
+            });
+            $('.subiendo').click(function() {
+                $('.clase3').slideUp();                
+            });
+            $('.bajandoSubiendo').click(function() {
+                $('.clase3').slideToggle("slow");                
+            });
+            $('.despareciendo').click(function () { 
+                $('.clase3').fadeOut();
+            });
+            $('.apareciendo').click(function () { 
+                $('.clase3').fadeIn();
+            });
+            $(".AnadirClase").click(function () { 
+                $('.clase3').addClass("fondoRojoLetraBlanca");
+            });
+            $(".quitarClase").click(function () { 
+                $('.clase3').removeClass("fondoRojoLetraBlanca");
+            });
+            $(".Antes").click(function () { 
+                $(this).parent().before('<h1 class="Extra">Hola mundo</h1>');
+                $('.Extra').css("color","red");
+                
+            });
+            $(".Despues").click(function () { 
+                $(this).parent().after('<h1 class="ExtraD">Hola mundo</h1>');
+                $('.ExtraD').css("color","blue");
+                
+            });
+            $(".AregarHTML").click(function () { 
+                $(this).parent().children("p").append($('.ocultar').html());
+                
+                
+            });
+            $(".AgregarTextoAClase3").click(function () { 
+                $(".clase3 p").append($(this).text());
+                
+                
+            });
+        });
+     </script>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="clase1">
+            <h1>Clases a probar</h1>
+            <button class="ocultar">.hide</button>
+            <button class="show">.show</button>
+            <button class="toggle">.toggle</button>
+            <button class="agregarDespues">.Append</button>
+            <button class="bajando">.slideDown</button>
+            <button class="subiendo">.slideUp</button>
+            <button class="bajandoSubiendo">.slideToggle</button>
+            <button class="despareciendo">.fadeout</button>
+            <button class="apareciendo">.fadeIn</button>
+            <button class="AnadirClase">.AddClass</button>
+            <button class="quitarClase">.quitarClass</button>
+            
+            
+            
+        </div>
+        <div class="clase2">
+            <h1>Titulo 1</h1>
+            <button>boton 1</button>
+            <p>Parrafo 1</p>
+        </div>
+        <div class="clase3">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt obcaecati culpa doloribus iusto quaerat ea repudiandae, placeat possimus ad recusandae, perspiciatis aliquam debitis, impedit quidem deleniti illo quia voluptatem fugiat.</p>
+        </div>
+        <div class="antesDespues">
+            <button class="Antes">.Antes y rojo</button>
+            <button class="Despues">.Despues y azul</button>
+            <button class="AregarHTML">.Agregar html al final de los textos</button>
+            <button class="AgregarTextoAClase3"> Agregar esto parrafo a clase 3</button>
+
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam nam saepe accusamus quaerat amet quam porro magnam eum autem fugiat rem maiores, quisquam culpa ea consectetur facilis, voluptatem reiciendis inventore.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam tempore quisquam soluta sapiente doloremque quam mollitia consequuntur unde voluptas facere accusantium voluptatem quas quaerat neque enim, dicta perferendis eius necessitatibus.
+            </p>
+        </div>
+    </div>    
+</body>
+</html>
+<!-- 
+
+
+
+
+
+
+
+
+
+.attr
+.val
